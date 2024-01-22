@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "08d5ab38-7246-4220-b4e3-c3afcfb9021b",
+		"name": "Pago",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17148185"
+	},
+	"item": [
+		{
+			"name": "actualizarEstatus",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pagos/1/estatus?estatus=EN_PROCESO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pagos",
+						"1",
+						"estatus"
+					],
+					"query": [
+						{
+							"key": "estatus",
+							"value": "EN_PROCESO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generarPago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"concepto\": \"pago 1\",\n    \"cantidad\": 1,\n    \"beneficiario\": \"Jorge\",\n    \"emisor\": \"Pedro\",\n    \"monto\": 100.0,\n    \"estatus\": \"Pendiente\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pagos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pagos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPagoPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pagos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pagos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pagos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pagos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
