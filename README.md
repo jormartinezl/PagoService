@@ -77,8 +77,18 @@ primary key (id));
 
 ## Kafka definicion
 > - topico estatus-topic
+> - producer envía la información del pago en formato texto al topico estatus-topic, ejemplo json del pago:
+>   - {
+        "id": 1,
+        "concepto": "Ejemplo",
+        "cantidad": 1,
+        "beneficiario": "Beneficiario",
+        "emisor": "Emisor",
+        "monto": 1.00,
+        "estatus": "EN_PROCESO"
+    }
 
-Tecnologías utilizadas:
+## Tecnologías utilizadas:
 
 - Spring Boot
 - Spring Web
@@ -88,3 +98,4 @@ Tecnologías utilizadas:
 - Docker
 - Junit
 - Mokito
+- Mysql
