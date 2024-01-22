@@ -75,6 +75,9 @@ monto decimal(20,2) not null,
 primary key (id));
 ```
 
+## Kafka definicion
+> - topico estatus-topic
+
 Tecnologías utilizadas:
 
 - Spring Boot
